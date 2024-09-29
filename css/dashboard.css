@@ -5,18 +5,19 @@
 }
 
 body {
-   
+
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     /* overflow-y: hidden; */
 }
+
 #left {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     min-height: 100%;
     padding: 0;
     margin: 0;
-  
+
 }
 
 
@@ -28,8 +29,8 @@ body {
     color: var(--bs-list-group-color);
     text-decoration: none;
     background-color: var(--bs-list-group-bg);
-    border:none;
-   
+    border: none;
+
     font-size: x-small;
 }
 
@@ -51,7 +52,7 @@ body {
     background-color: white;
     width: 100%;
     border-radius: 10px;
-   
+
 }
 
 
@@ -65,8 +66,9 @@ body {
 }
 
 
-.box { 
-    padding: 20px; /* Default padding for medium to large screens */
+.box {
+    padding: 20px;
+    /* Default padding for medium to large screens */
     text-align: center;
     width: 85%;
     height: 90px;
@@ -110,7 +112,7 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    
+
 }
 
 .chart-container2 {
@@ -140,9 +142,10 @@ body {
 
 #ticketSubmenu a {
     text-decoration: none;
-    background-color: #7706CD;
+    background-color: transparent;
     color: white;
 }
+
 .bg-purple:hover,
 .bg-purple:focus {
     background-color: #7706CD;
@@ -150,25 +153,26 @@ body {
 }
 
 .bg-purple {
-    background-color: #7706CD;
+    background-color: transparent;
     color: white;
     border-bottom: none;
 }
 
 #fix {
-   
-    background-color: #e9e9e9; /* Optional background color */
-     
+
+    background-color: #e9e9e9;
+    /* Optional background color */
+
 }
 
 
 #sidebar {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     height: 100%;
-    width: 200px;
+    width: 230px;
     position: fixed;
     top: 0;
-    left: -200px; /* Adjusted to match width */
+    left: -230px;
     z-index: 999;
     overflow-y: auto;
     transition: all 0.3s ease;
@@ -195,7 +199,7 @@ body {
 
 /* Sidebar Links */
 .list-group-item {
-    background-color: #7706CD;
+    background: transparent !important;
     color: white;
     font-size: small;
     border: none;
@@ -211,11 +215,13 @@ body {
 /* Sidebar Styling for Mobile */
 @media (max-width: 768px) {
     #sidebar {
-        left: -250px; /* Hide sidebar by default on smaller screens */
+        left: -250px;
+        /* Hide sidebar by default on smaller screens */
     }
 
     #sidebar.active {
-        left: 0; /* Show sidebar when active on smaller screens */
+        left: 0;
+        /* Show sidebar when active on smaller screens */
     }
 }
 
@@ -227,14 +233,17 @@ body {
 #toggleButton {
     position: fixed;
     top: 10px;
-    left: 10px; /* Adjust the position for mobile */
-    background-color: #7706CD;
+    left: 10px;
+    /* Adjust the position for mobile */
+    background-image: radial-gradient(circle, #004102 50%, #131313 100%);
     border: none;
-    border-radius: 50%; /* Circular button */
+    border-radius: 50%;
+    /* Circular button */
     width: 50px;
     height: 50px;
     cursor: pointer;
-    z-index: 1001; /* Ensure it stays above the navbar */
+    z-index: 1001;
+    /* Ensure it stays above the navbar */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -245,9 +254,11 @@ body {
 .bar {
     width: 25px;
     height: 3px;
-    background-color: white; /* White bars */
+    background-color: white;
+    /* White bars */
     margin: 3px 0;
-    border-radius: 5px; /* Rounded edges on the bars */
+    border-radius: 5px;
+    /* Rounded edges on the bars */
 }
 
 /* Navbar Styling */
@@ -264,31 +275,26 @@ body {
 
 /* Logo Styling */
 .logo {
-    max-width: 135px; /* Set max width for the logo */
+    max-width: 135px;
+    /* Set max width for the logo */
     height: auto;
-    margin-left: auto; 
-   
+    margin-left: auto;
+
 }
 
 
-/* @media (max-width:769px)
-{
-        .res{
-margin-left: 80px;
-width: 90%;
-    }
-} */
-/* Default styles for .box2 and .box3 */
-.box2, .box3 {
+.box2,
+.box3 {
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     margin: 0 auto;
-  
+
     border: 1px solid #666;
 }
 
-.box2 h3, .box3 h3 {
+.box2 h3,
+.box3 h3 {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -307,32 +313,50 @@ width: 90%;
 /* 768 - 1024 */
 /* Button Group Container */
 .btn-group {
-    display: flex;                /* Aligns buttons in a row */
-    gap: 15px;                    /* Space between each button, adjust if needed */
-    align-items: center;          /* Aligns buttons vertically centered */
+    display: flex;
+    /* Aligns buttons in a row */
+    gap: 15px;
+    /* Space between each button, adjust if needed */
+    align-items: center;
+    /* Aligns buttons vertically centered */
 }
 
 /* General Button Style */
 .btn-group button {
-    padding: 5px 12px;            /* Padding for consistent button sizing */
-    border: none;                 /* No default border for unselected buttons */
-    background-color: transparent;/* Transparent background for non-selected buttons */
-    color: #555;                  /* Light text color for non-selected buttons */
-    cursor: pointer;              /* Changes cursor to pointer on hover */
-    border-radius: 5px;           /* Rounded corners, adjust if needed */
-    font-size: 11px;              /* Font size for clear readability */
-    text-align: center;           /* Centers text within the button */
-    transition: all 0.2s ease;    /* Smooth transition for hover or selection effects */
-    font-weight: 500;             /* Medium weight for non-selected buttons */
+    padding: 5px 12px;
+    /* Padding for consistent button sizing */
+    border: none;
+    /* No default border for unselected buttons */
+    background-color: transparent;
+    /* Transparent background for non-selected buttons */
+    color: #555;
+    /* Light text color for non-selected buttons */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    border-radius: 5px;
+    /* Rounded corners, adjust if needed */
+    font-size: 11px;
+    /* Font size for clear readability */
+    text-align: center;
+    /* Centers text within the button */
+    transition: all 0.2s ease;
+    /* Smooth transition for hover or selection effects */
+    font-weight: 500;
+    /* Medium weight for non-selected buttons */
 }
 
 /* Style for the Selected Button */
 .btn-group .active {
-    border: 1px solid #000;       /* Thin border for the selected button (adjust size if needed) */
-    background-color: #fff;       /* White background for the selected button */
-    font-weight: bold;            /* Bold text to indicate it's selected */
-    padding: 4px 10px;            /* Fine-tuned padding to match the design */
-    color: #000;                  /* Black text for high contrast */
+    border: 1px solid #000;
+    /* Thin border for the selected button (adjust size if needed) */
+    background-color: #fff;
+    /* White background for the selected button */
+    font-weight: bold;
+    /* Bold text to indicate it's selected */
+    padding: 4px 10px;
+    /* Fine-tuned padding to match the design */
+    color: #000;
+    /* Black text for high contrast */
 }
 
 /* Responsive Design */
@@ -340,35 +364,47 @@ width: 90%;
 /* Small devices (mobile phones, 320px and up) */
 @media (max-width: 480px) {
     .btn-group {
-        gap: 8px;                 /* Reduce the gap between buttons for smaller screens */
+        gap: 8px;
+        /* Reduce the gap between buttons for smaller screens */
     }
+
     .btn-group button {
-        padding: 4px 8px;         /* Smaller padding for compact size */
-        font-size: 9px;           /* Small font for better fit */
+        padding: 4px 8px;
+        /* Smaller padding for compact size */
+        font-size: 9px;
+        /* Small font for better fit */
     }
 }
 
 /* Medium devices (tablets, 481px and up) */
 @media (min-width: 481px) and (max-width: 768px) {
     .btn-group {
-        gap: 12px;                /* Adjust the gap slightly for tablets */
+        gap: 12px;
+        /* Adjust the gap slightly for tablets */
     }
+
     .btn-group button {
-        padding: 5px 10px;        /* Medium padding for tablet screens */
-        font-size: 10px;          /* Slightly larger font size for medium screens */
+        padding: 5px 10px;
+        /* Medium padding for tablet screens */
+        font-size: 10px;
+        /* Slightly larger font size for medium screens */
     }
 }
 
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
     .btn-group {
-        gap: 15px;                /* Increase the gap between buttons for larger screens */
+        gap: 15px;
+        /* Increase the gap between buttons for larger screens */
     }
+
     .btn-group button {
-        padding: 3px 8px;        /* Larger padding for more comfortable button size on larger screens */
-        font-size: 11px;          /* Slightly larger font size for readability on large desktops */
+        padding: 3px 8px;
+        /* Larger padding for more comfortable button size on larger screens */
+        font-size: 11px;
+        /* Slightly larger font size for readability on large desktops */
     }
-    
+
 }
 
 /* Media Queries for Mobile Screens */
@@ -377,14 +413,16 @@ width: 90%;
         justify-content: space-between;
         background-color: #7706CD;
     }
-   
+
 
     .logo {
-        margin-left: 100px; /* Adjust logo position on mobile */
+        margin-left: 100px;
+        /* Adjust logo position on mobile */
     }
 
     #toggleButton {
-        display: flex; /* Show toggle button on smaller screens */
+        display: flex;
+        /* Show toggle button on smaller screens */
     }
 }
 
@@ -392,35 +430,35 @@ width: 90%;
 
 /* Hide Toggle Button on Larger Screens */
 @media (max-width: 900px) {
-    /* #toggleButton {
-        display: none; 
-    } */
-    /* .logo {
-        display: none; 
-    } */
 
     #sidebar {
-        left:-250px !important; /* Sidebar visible by default on larger screens */
+        left: -250px !important;
+        /* Sidebar visible by default on larger screens */
     }
 
-  
+
 }
+
 @media (min-width: 1024px) {
     #toggleButton {
-        display: none; /* Hide toggle button on larger screens */
+        display: none;
+        /* Hide toggle button on larger screens */
     }
-    .res{
-    
+
+    .res {
+
         width: 100%;
-            }
-            .logo {
-                display: none; /* Adjust logo position on mobile */
-            }
-            #sidebar {
-                left:  0px; /* Sidebar visible by default on larger screens */
-            }
+    }
 
-  
+    .logo {
+        display: none;
+        /* Adjust logo position on mobile */
+    }
+
+    #sidebar {
+        left: 0px;
+        /* Sidebar visible by default on larger screens */
+    }
+
+
 }
-
-

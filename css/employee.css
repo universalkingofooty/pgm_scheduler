@@ -9,8 +9,8 @@ body {
 }
 
 #left {
-    background-color: #7706CD;
-    height: 150vh;
+    background-image: radial-gradient(#004102 ,#131313 50%);
+    height: 200vh;
 }
 
 .container-sty {
@@ -21,14 +21,14 @@ body {
 
 
 .dropdown-menu {
-    background-color: #7706CD;
+    background-color: transparent;
     border: none;
 
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: #7706CD;
+    background-color: transparent;
     color: white;
 }
 
@@ -68,7 +68,7 @@ i,
 }
 
 .list-group-item {
-    background-color: #7706CD !important;
+    background-color: transparent !important;
     color: white !important;
     font-size: small !important;
     border: none !important;
@@ -76,7 +76,7 @@ i,
 
 
 .list-group-item-action {
-    background-color: #7706CD !important;
+    background-color: transparent !important;
     color: white !important;
 
 }
@@ -149,7 +149,7 @@ tr {
 }
 
 tr th {
-    color: #7706CD !important;
+    color: #006103 !important;
     text-align: center !important;
 }
 
@@ -193,31 +193,36 @@ th {
     border-top: 1px solid #ced4da;
 }
 
-.employee,.remove {
+.employee,
+.remove {
     float: inline-end;
-    border: 1px solid #7706CD;
-    color: #7706CD;
+    border: 1px solid #006103 ;
+    color: #006103 ;
     padding: 5px 30px 5px 30px;
     margin-right: 5%;
     background-color: transparent;
     border-radius: 5px;
 }
-.modify{
+
+.modify {
     float: inline-end;
-    border: 1px solid #7706CD;
+    border: 1px solid #006103 ;
     color: white;
     padding: 5px 30px 5px 30px;
     margin-right: 5%;
-    background-color: #7706CD;
+    background-color: #083a0a;
     border-radius: 5px;
 }
 
-select{
+select {
     border: 1px solid #ced4da;
     width: 60%;
     padding: 7px;
     border-radius: 5px;
 }
+
+
+
 
 @media (max-width: 1200px) {
     #left {
@@ -285,5 +290,3 @@ select{
         margin-left: 8%;
     }
 }
-
-
