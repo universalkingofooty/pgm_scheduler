@@ -1,20 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButton = document.getElementById('toggleButton');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
+document.querySelectorAll(".toggleDesc").forEach(function (btn) {
+    btn.addEventListener("click", function (event) {
+        event.preventDefault();
+        const target = event.target.getAttribute('data-target');
+        const shortDesc = document.getElementById("shortDesc" + target);
+        const fullDesc = document.getElementById("fullDesc" + target);
 
-    // Toggle sidebar visibility
-    toggleButton.addEventListener('click', function () {
-        sidebar.classList.toggle('visible');
-        overlay.style.display = sidebar.classList.contains('visible') ? 'block' : 'none';
-    });
-
-    // Close sidebar on overlay click
-    overlay.addEventListener('click', function () {
-        sidebar.classList.remove('visible');
-        overlay.style.display = 'none';
+        if (fullDesc.classList.contains("d-none")) {
+            shortDesc.classList.add("d-none");
+            fullDesc.classList.remove("d-none");
+        } else {
+            fullDesc.classList.add("d-none");
+            shortDesc.classList.remove("d-none");
+        }
     });
 });
+
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('show');
+}
+
+
 const dataSets = {
     '12months': {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],

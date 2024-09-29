@@ -5,19 +5,16 @@
 }
 
 body {
-
+   
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     /* overflow-y: hidden; */
 }
-
 #left {
     background-image: radial-gradient(#004102 ,#131313 50%);
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
 
+    height: 200vh;
 }
 
 
@@ -29,8 +26,7 @@ body {
     color: var(--bs-list-group-color);
     text-decoration: none;
     background-color: var(--bs-list-group-bg);
-    border: none;
-
+    border:none;   
     font-size: x-small;
 }
 
@@ -52,7 +48,7 @@ body {
     background-color: white;
     width: 100%;
     border-radius: 10px;
-
+   
 }
 
 
@@ -66,9 +62,8 @@ body {
 }
 
 
-.box {
-    padding: 20px;
-    /* Default padding for medium to large screens */
+.box { 
+    padding: 20px; /* Default padding for medium to large screens */
     text-align: center;
     width: 85%;
     height: 90px;
@@ -106,13 +101,15 @@ body {
 
 
 
+ 
+
 
 /* Chart Containers */
 .chart-container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-
+    
 }
 
 .chart-container2 {
@@ -142,64 +139,34 @@ body {
 
 #ticketSubmenu a {
     text-decoration: none;
-    background-color: transparent;
+    background-image: radial-gradient(#004102 ,#131313 50%);
+
     color: white;
 }
-
 .bg-purple:hover,
 .bg-purple:focus {
-    background-color: #7706CD;
+    background:transparent;
+
     color: white;
 }
 
 .bg-purple {
-    background-color: transparent;
+    background: transparent !important;
     color: white;
     border-bottom: none;
 }
 
 #fix {
-
-    background-color: #e9e9e9;
-    /* Optional background color */
-
+   
+    background-color: #e9e9e9; /* Optional background color */
+     
 }
 
 
-#sidebar {
-    background-image: radial-gradient(#004102 ,#131313 50%);
-    height: 100%;
-    width: 230px;
-    position: fixed;
-    top: 0;
-    left: -230px;
-    z-index: 999;
-    overflow-y: auto;
-    transition: all 0.3s ease;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-#sidebar.visible {
-    left: 0;
-}
-
-/* Overlay Style */
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
-    display: none;
-}
 
 /* Sidebar Links */
 .list-group-item {
-    background: transparent !important;
+    background:transparent;
     color: white;
     font-size: small;
     border: none;
@@ -212,89 +179,18 @@ body {
 
 }
 
-/* Sidebar Styling for Mobile */
-@media (max-width: 768px) {
-    #sidebar {
-        left: -250px;
-        /* Hide sidebar by default on smaller screens */
-    }
 
-    #sidebar.active {
-        left: 0;
-        /* Show sidebar when active on smaller screens */
-    }
-}
-
-
-
-
-
-
-#toggleButton {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    /* Adjust the position for mobile */
-    background-image: radial-gradient(circle, #004102 50%, #131313 100%);
-    border: none;
-    border-radius: 50%;
-    /* Circular button */
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    z-index: 1001;
-    /* Ensure it stays above the navbar */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    /* White bars */
-    margin: 3px 0;
-    border-radius: 5px;
-    /* Rounded edges on the bars */
-}
-
-/* Navbar Styling */
-.navbar {
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Logo Styling */
-.logo {
-    max-width: 135px;
-    /* Set max width for the logo */
-    height: auto;
-    margin-left: auto;
-
-}
-
-
-.box2,
-.box3 {
+/* Default styles for .box2 and .box3 */
+.box2, .box3 {
     padding: 20px;
     text-align: center;
     border-radius: 20px;
     margin: 0 auto;
-
+  
     border: 1px solid #666;
 }
 
-.box2 h3,
-.box3 h3 {
+.box2 h3, .box3 h3 {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -313,152 +209,247 @@ body {
 /* 768 - 1024 */
 /* Button Group Container */
 .btn-group {
-    display: flex;
-    /* Aligns buttons in a row */
-    gap: 15px;
-    /* Space between each button, adjust if needed */
-    align-items: center;
-    /* Aligns buttons vertically centered */
+    display: flex;                /* Aligns buttons in a row */
+    gap: 15px;                    /* Space between each button, adjust if needed */
+    align-items: center;          /* Aligns buttons vertically centered */
 }
 
 /* General Button Style */
 .btn-group button {
-    padding: 5px 12px;
-    /* Padding for consistent button sizing */
-    border: none;
-    /* No default border for unselected buttons */
-    background-color: transparent;
-    /* Transparent background for non-selected buttons */
-    color: #555;
-    /* Light text color for non-selected buttons */
-    cursor: pointer;
-    /* Changes cursor to pointer on hover */
-    border-radius: 5px;
-    /* Rounded corners, adjust if needed */
-    font-size: 11px;
-    /* Font size for clear readability */
-    text-align: center;
-    /* Centers text within the button */
-    transition: all 0.2s ease;
-    /* Smooth transition for hover or selection effects */
-    font-weight: 500;
-    /* Medium weight for non-selected buttons */
+    padding: 5px 12px;            /* Padding for consistent button sizing */
+    border: none;                 /* No default border for unselected buttons */
+    background-color: transparent;/* Transparent background for non-selected buttons */
+    color: #555;                  /* Light text color for non-selected buttons */
+    cursor: pointer;              /* Changes cursor to pointer on hover */
+    border-radius: 5px;           /* Rounded corners, adjust if needed */
+    font-size: 11px;              /* Font size for clear readability */
+    text-align: center;           /* Centers text within the button */
+    transition: all 0.2s ease;    /* Smooth transition for hover or selection effects */
+    font-weight: 500;             /* Medium weight for non-selected buttons */
 }
 
 /* Style for the Selected Button */
 .btn-group .active {
-    border: 1px solid #000;
-    /* Thin border for the selected button (adjust size if needed) */
-    background-color: #fff;
-    /* White background for the selected button */
-    font-weight: bold;
-    /* Bold text to indicate it's selected */
-    padding: 4px 10px;
-    /* Fine-tuned padding to match the design */
-    color: #000;
-    /* Black text for high contrast */
+    border: 1px solid #000;       /* Thin border for the selected button (adjust size if needed) */
+    background-color: #fff;       /* White background for the selected button */
+    font-weight: bold;            /* Bold text to indicate it's selected */
+    padding: 4px 10px;            /* Fine-tuned padding to match the design */
+    color: #000;                  /* Black text for high contrast */
+}
+/* sakthi code start */
+.dropdown-menu {
+    background-color: #7706CD;
+    border: none;
+
 }
 
-/* Responsive Design */
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: #7706CD;
+    color: white;
+}
 
-/* Small devices (mobile phones, 320px and up) */
-@media (max-width: 480px) {
-    .btn-group {
-        gap: 8px;
-        /* Reduce the gap between buttons for smaller screens */
+.dropdown-item {
+    color: white;
+
+
+}
+
+i,
+.para {
+    color: white;
+  
+}
+
+.content {
+    color: white;
+    padding-left: 7%;
+   
+}
+
+.mobile{
+    display:none !important;
+}
+h1{
+    text-align: center;
+    margin-top: 6%;
+}
+/* code  end */
+
+
+@media (max-width: 320px) {
+    .btn-group button .dis {
+       padding-left: 300px;
+        display: block;           /* Adjust padding for small screens */
     }
 
-    .btn-group button {
-        padding: 4px 8px;
-        /* Smaller padding for compact size */
-        font-size: 9px;
-        /* Small font for better fit */
+    .btn-group p {
+        font-size: 14px;  
+               /* Smaller heading font for very small screens */
+    }
+}
+
+/* Sidebar Styling for Mobile */
+@media (max-width: 768px) {
+    #sidebar {
+        left: -250px; /* Hide sidebar by default on smaller screens */
+    }
+
+    #sidebar.show {
+        left: 0; /* Show sidebar when active on smaller screens */
     }
 }
 
 /* Medium devices (tablets, 481px and up) */
 @media (min-width: 481px) and (max-width: 768px) {
     .btn-group {
-        gap: 12px;
-        /* Adjust the gap slightly for tablets */
+        gap: 12px;                /* Adjust the gap slightly for tablets */
     }
-
     .btn-group button {
-        padding: 5px 10px;
-        /* Medium padding for tablet screens */
-        font-size: 10px;
-        /* Slightly larger font size for medium screens */
+        padding: 5px 10px;        /* Medium padding for tablet screens */
+        font-size: 10px;          /* Slightly larger font size for medium screens */
     }
 }
 
 /* Large devices (desktops, 1024px and up) */
 @media (min-width: 1024px) {
     .btn-group {
-        gap: 15px;
-        /* Increase the gap between buttons for larger screens */
+        gap: 15px;                /* Increase the gap between buttons for larger screens */
     }
-
     .btn-group button {
-        padding: 3px 8px;
-        /* Larger padding for more comfortable button size on larger screens */
-        font-size: 11px;
-        /* Slightly larger font size for readability on large desktops */
+        padding: 3px 8px;        /* Larger padding for more comfortable button size on larger screens */
+        font-size: 11px;          /* Slightly larger font size for readability on large desktops */
     }
-
-}
-
-/* Media Queries for Mobile Screens */
-@media (max-width: 767px) {
-    .navbar {
-        justify-content: space-between;
-        background-color: #7706CD;
-    }
-
-
-    .logo {
-        margin-left: 100px;
-        /* Adjust logo position on mobile */
-    }
-
-    #toggleButton {
-        display: flex;
-        /* Show toggle button on smaller screens */
-    }
+    
 }
 
 
 
-/* Hide Toggle Button on Larger Screens */
-@media (max-width: 900px) {
 
-    #sidebar {
-        left: -250px !important;
-        /* Sidebar visible by default on larger screens */
+
+
+@media (max-width: 320px) {
+    .box2, .box3 {
+        padding: 15px;
+        border-radius: 15px;
     }
 
-
-}
-
-@media (min-width: 1024px) {
-    #toggleButton {
-        display: none;
-        /* Hide toggle button on larger screens */
+    .box2 h3, .box3 h3 {
+        font-size: 22px;
     }
 
-    .res {
+    .box2 p, .box3 p {
+        font-size: 10px;
+    }
 
+      .cd{
         width: 100%;
     }
-
-    .logo {
-        display: none;
-        /* Adjust logo position on mobile */
+    .rc {
+        justify-content: center;
+        align-items: center;
+        padding-left: 6px;
+    
+    }
+    .box-border {
+        margin-top:30px ;
     }
 
-    #sidebar {
-        left: 0px;
-        /* Sidebar visible by default on larger screens */
+    .box {
+        padding-top: 25px;
     }
-
-
+    .box h3 {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .box p {
+        font-size: 8px;
+    }
 }
+
+@media (max-width: 768px) {
+    .box-border {
+        margin-top:30px ;
+    }
+}
+
+/* vddjff sakthi code  */
+@media (max-width: 1200px) {
+    #left {
+        display: none;
+        height: auto;
+        padding: 40px 0;
+        
+    }
+
+    .container-sty {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-sty {
+        padding: 20px;
+    }
+    #fix span{
+        display:block;
+    }
+    #sidebar{
+        display: block;
+    }
+    
+    .mobile{
+        display: none !important;
+    }
+    .navbar{
+        display: flex !important;
+    }
+}
+
+
+ @media (min-width:762px) {
+    .container-sty {
+        padding: 20px;
+    }
+    #fix span {
+        display:block;
+    }
+    #sidebar{
+        display: block;
+    }
+    
+    .mobile{
+        display: none !important;
+    }
+    .navbar{
+        display: flex !important;
+    }
+    
+ }
+@media (max-width: 768px) {
+    .container-sty {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .content {
+        color: white;
+        padding-left: 2%;
+       
+    }
+    #fix span{
+        display: none;
+    }
+    #icon2 {
+        margin-left: 4%;
+    }
+    .mobile{
+        display: block !important;
+    }
+    .navbar{
+        display: flex !important;
+    }
+    
+}
+
