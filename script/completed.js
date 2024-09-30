@@ -42,7 +42,7 @@ $(document).ready(function () {
                                 </div>
                                  <div class="col-6">
                                     <button class="btn btn-assign" ${rowData.employees.every(e => e.pending > 5) ? 'disabled' : ''}>
-                                        ReAssign
+                                        View
                                     </button>
                                 </div>                                
                             </div>
