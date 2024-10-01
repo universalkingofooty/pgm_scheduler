@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    
 }
 
 #left {
@@ -143,6 +144,7 @@ i,
 .details-row {
     background-color: #f8f9fa;
     
+    
 }
 
 .details-row td {
@@ -198,13 +200,15 @@ td{
 }
 
 #table {
-    width: 100%;
+    width: 1000;
 }
 .table thead  tr th {
     color: #083a0a;
     font-weight: bold;
     padding: 10px;
     text-align: centre !important;
+    
+
 }
 
 table{
@@ -241,11 +245,14 @@ a{
 }
 
 
-#ticketTable
-{
-    width: 100%; /* Full width */
-    border-collapse: collapse; /* Merge borders */
+#ticketTable {
+    width: 100%; /* Set to your desired width */
+    table-layout: fixed; /* Ensures fixed column widths */
 }
+
+
+
+
 #ticketTable th, #ticketTable td 
 {
     padding: 10px; /* Space around text */
@@ -267,9 +274,12 @@ a{
 {
     border: 1px solid ;
     padding: 20px;
+  
 }
+
 table
 {
+  
     width: 100%;
     border-collapse: collapse;
 }
@@ -278,12 +288,20 @@ th, td
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    
 }
 th 
 {
     background-color: #6a1b9a;
     color: white;
-}      
+  
+}     
+#fws{
+    width: 16%;
+} 
+#swf{
+    width: 5%;
+}
 .collapse-icon 
 {
     cursor: pointer;
@@ -292,7 +310,7 @@ th
 {
     content: '▼';
     display: inline-block;
-    margin-right: 8px;
+    
 }
 .toggle-row.expanded .collapse-icon::before 
 {
@@ -412,6 +430,7 @@ tr.shown .details-control::before {
 }
 
 td.details-control::before {
+    
     content: "▼";
     padding-right: 5px;
 }

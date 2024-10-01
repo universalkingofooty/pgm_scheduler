@@ -15,11 +15,6 @@ $(document).ready(function () {
                         <div class="col-md-4">
                             <strong class="d-flex justify-content-left">Customer Address</strong>
                             <p class="pt-2" style="font-size: 13px;text-align: left;">${rowData.address}</p>
-                            <label class="mt-3 d-flex justify-content-left">Employee Name</label>
-                            <select class="form-select mt-2 employee-select" disabled>
-                                ${employeeOptions}
-                            </select>
-                            <small class="text-muted mt-2">Pending work: <span class="pending-work">${rowData.employees[0].pending}</span></small>
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-6">
@@ -40,11 +35,7 @@ $(document).ready(function () {
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="col-6">
-                                    <button class="btn btn-assign" ${rowData.employees.every(e => e.pending > 5) ? 'disabled' : ''}>
-                                        View
-                                    </button>
-                                </div>                                
+                                                               
                             </div>
                         </div>
                     </div>

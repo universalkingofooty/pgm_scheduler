@@ -403,15 +403,3 @@ tr.shown td.details-control {
     float: right;
 }
 
-td.details-control {
-    cursor: pointer;
-}
-
-tr.shown .details-control::before {
-    content: " ";
-}
-
-td.details-control::before {
-    content: "▼";
-    padding-right: 5px;
-}
