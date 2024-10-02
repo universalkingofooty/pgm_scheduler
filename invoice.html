@@ -13,13 +13,11 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/completed.css">
+    <link rel="stylesheet" href="css/invoice.css">
     <link rel="stylesheet" href="css/image.css">
     <script defer src="script/invoice.js"></script>
     <script defer src="script/image.js"></script>
 </head>
-<style></style>
-
 <body>
     <div class="container-fluid">
         <div class="row">
@@ -46,7 +44,7 @@
                                     </a>
 
                                     <div id="ticketSubmenu" class="collapse">
-                                        <ul class="list-group list-group-flush">
+                                        <ul class="list-group list-group-flush" id="list-group-flush">
                                             <li class="list-group-item"><a href="Unassigned.html"
                                                     class=" bg-purple">Unassigned
                                                     Ticket</a></li>
@@ -91,7 +89,7 @@
 
                             <!-- Table -->
                             <div class="container-fluid mt-5 d-flex justify-content-center" id="table">
-                                <table id="ticketTable" class="table table-striped table-hover">
+                                <table id="ticketTable" class="table">
                                     <thead>
                                         <tr>
                                             <th id="swf"></th>

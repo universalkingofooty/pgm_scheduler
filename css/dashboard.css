@@ -179,6 +179,19 @@ body {
 
 }
 
+.list-group-item-action:focus {
+    background-color: transparent;
+    color: white;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+#list-group-flush1{
+    margin-left: 60px;
+}
 
 /* Default styles for .box2 and .box3 */
 .box2, .box3 {

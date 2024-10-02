@@ -8,7 +8,7 @@ $(document).ready(function () {
         `).join('');
 
         return `
-            <tr class="collapse-content details-row" data-ticket-id="${rowData.ticketID}">
+            <div class="collapse-content details-row" data-ticket-id="${rowData.ticketID}">
                 <td colspan="8">
                     <div class="row">
                         <div class="col-md-1"></div>
@@ -48,7 +48,7 @@ $(document).ready(function () {
                         </div>
                     </div>
                 </td>
-            </tr>`;
+            </div>`;
     }
 
     // Sample data for dynamic row details

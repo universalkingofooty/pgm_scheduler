@@ -162,7 +162,16 @@ i,
     padding-left: 18%;
     color: white;
 }
+.list-group-item-action:focus {
+    background-color: transparent;
+    color: white;
+
+}
 
 a{
+    color: white;
     text-decoration: none;
+}
+#list-group-flush{
+    margin-left: 60px;
 }
