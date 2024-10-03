@@ -187,7 +187,9 @@ tr.shown td.details-control {
 .dataTables_length label {
     margin-right: 10px;
 }
-
+#swf{
+    width: 50px !important;
+}
 td.details-control {
     cursor: pointer;
 }

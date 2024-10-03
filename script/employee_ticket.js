@@ -1,6 +1,22 @@
 $(document).ready(function () {
     console.log("Document is ready!");
 
+        // // Function to fetch employee data from API
+        // async function fetchEmployeeData() {
+        //     try {
+        //         const response = await fetch('YOUR_API_ENDPOINT_HERE'); // Replace with your API endpoint
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         const employeeData = await response.json(); // Assuming the API returns JSON
+    
+        //         // Call a function to populate the table and cards
+        //         populateEmployeeTableAndCards(employeeData);
+        //     } catch (error) {
+        //         console.error('There was a problem with the fetch operation:', error);
+        //     }
+        // }
+
     // Sample static data
     const employeeData = [
         {
@@ -98,6 +114,9 @@ $(document).ready(function () {
         `;
         cardContainer.innerHTML += card;
     });
+
+    // fetchEmployeeData();
+
 
     // Add event listener for opening and closing details in the table
     $('#ticketTable tbody').on('click', 'tr.clickable', function () {

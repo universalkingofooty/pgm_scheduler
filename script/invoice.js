@@ -51,6 +51,35 @@ $(document).ready(function () {
             </div>`;
     }
 
+
+        // // Define the API endpoint
+        // const apiEndpoint = ''; // Change this to your actual API URL
+
+        // // Fetch data from the API
+        // fetch(apiEndpoint)
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         // Assuming data is an array of ticket details similar to rowDetails structure
+        //         const rowDetails = data; // Store fetched data into rowDetails
+                
+        //         // Set the initial assigned employee name in the main table rows
+        //         $('#ticketTable tbody tr').each(function () {
+        //             const ticketID = $(this).find('td:nth-child(2)').text();
+        //             const details = rowDetails.find(detail => detail.ticketID === ticketID);
+    
+        //             // Set initial assigned employee in the table's main row
+        //             if (details && details.employees.length > 0) {
+        //                 const initialEmployee = details.employees[0].name;
+        //                 $(this).find('.assigned-employee').text(initialEmployee);
+        //             }
+        //         });
+    
+
     // Sample data for dynamic row details
     const rowDetails = [
         {
