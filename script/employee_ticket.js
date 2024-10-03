@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    $('#employeeTable').DataTable();
-});
-$(document).ready(function () {
     console.log("Document is ready!");
 
     // Sample static data
@@ -38,7 +35,7 @@ $(document).ready(function () {
         }
     ];
 
-    // Initialize DataTables
+    // Initialize DataTables for larger screens
     const table = $('#ticketTable').DataTable({
         paging: true,
         lengthChange: true,
@@ -49,9 +46,13 @@ $(document).ready(function () {
         responsive: true
     });
 
-    // Insert data into the table dynamically
+    // Insert data into the table and card layout dynamically
+    const tableBody = document.querySelector("#employeeTableBody");
+    const cardContainer = document.querySelector("#employeeCards");
+
     employeeData.forEach((employee, index) => {
-        let row = `
+        // Table Row for larger screens
+        const tableRow = `
             <tr data-bs-toggle="collapse" data-bs-target="#details${index + 1}" class="clickable">
                 <td class="details-control"></td>
                 <td>${employee.id}</td>
@@ -67,30 +68,51 @@ $(document).ready(function () {
                 <td colspan="9">
                     <div class="row">
                         <div class="col-md-12 d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary modify">Modify</button>
-                            <button type="button" class="btn btn-danger remove">Remove</button>
+                            <button type="button" class="btn btn-primary modify" onclick="modifyEmployee(${index})">Modify</button>
+                            <button type="button" class="btn btn-danger remove" onclick="removeEmployee(${index})">Remove</button>
                         </div>
                     </div>
                 </td>
             </tr>
         `;
-        table.row.add($(row)).draw(false);
+        tableBody.innerHTML += tableRow;
+
+        // Card Layout for smaller screens
+        const card = `
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Employee ID: ${employee.id}</h5>
+                    <p class="card-text"><strong>Name:</strong> ${employee.name}</p>
+                    <p class="card-text"><strong>Phone:</strong> ${employee.phone}</p>
+                    <p class="card-text"><strong>Specialization:</strong> ${employee.specialization}</p>
+                    <p class="card-text"><strong>Email:</strong> ${employee.email}</p>
+                    <p class="card-text"><strong>Location:</strong> ${employee.location}</p>
+                    <p class="card-text"><strong>Completed Work:</strong> ${employee.completedWork}</p>
+                    <p class="card-text"><strong>Pending Work:</strong> ${employee.pendingWork}</p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary modify me-2" onclick="modifyEmployee(${index})">Modify</button>
+                        <button type="button" class="btn btn-danger remove" onclick="removeEmployee(${index})">Remove</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        cardContainer.innerHTML += card;
     });
 
-    // Add event listener for opening and closing details
+    // Add event listener for opening and closing details in the table
     $('#ticketTable tbody').on('click', 'tr.clickable', function () {
         const target = $(this).data('bs-target');
         $(target).collapse('toggle');
     });
 
-    // Event listener for Modify button (added dynamically)
+    // Event listener for Modify button
     $('#ticketTable tbody').on('click', '.modify', function () {
         const row = $(this).closest('tr').prev();
         alert(`Modify clicked for employee: ${row.find('td:eq(2)').text()}`);
         // Add your modify logic here
     });
 
-    // Event listener for Remove button (added dynamically)
+    // Event listener for Remove button
     $('#ticketTable tbody').on('click', '.remove', function () {
         const row = $(this).closest('tr').prev();
         if (confirm(`Are you sure you want to remove employee: ${row.find('td:eq(2)').text()}?`)) {
