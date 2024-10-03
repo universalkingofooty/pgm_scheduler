@@ -14,12 +14,26 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/nav.css">
-    <!-- <link rel="stylesheet" href="css/invoice.css"> -->
     <link rel="stylesheet" href="css/image.css">
     <script defer src="script/invoice.js"></script>
     <script defer src="script/image.js"></script>
 </head>
 <body>
+
+    <div id="nav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="col-4">
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+            </div>
+            <div class="col-4 text-center">
+                <img src="images/logo.png" alt="Logo" style="max-width: 100%;">
+            </div>
+            <div class="col-4 text-end">
+                <img src="icon/Mask group.png" alt="Profile Icon" style="max-width: 100%;">
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="container">
@@ -145,7 +159,6 @@
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
     <script>
-        // Sidebar toggle script for mobile view
         document.getElementById('sidebarToggle').addEventListener('click', function () {
             var sidebar = document.getElementById('left');
             sidebar.classList.toggle('active');

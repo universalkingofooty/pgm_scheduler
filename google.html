@@ -50,21 +50,7 @@
 <body>
 
     <div class="container" id="sign-in-page">
-        <div class="button-group">
-            <button id="signup-button" onclick="showSignUp()">SignUp</button>
-            <button id="signin-button" onclick="showSignIn()">SignIn</button>
-        </div>
-        <h1>SignUp</h1>
-        <input type="email" id="email" class="input-field" placeholder="abc@gmail.com">
-        <input type="password" id="password" class="input-field" placeholder="Password">
-        <button class="signup-button" onclick="handleSignUp()">signup</button>
         <div class="g_id_signin"></div>
-    </div>
-
-    <div class="container" id="home-page" style="display: none;">
-        <h1>Home</h1>
-        <div id="email-display"></div>
-        <button class="signup-button" id="signout-button" onclick="signOut()" disabled>SignOut</button>
     </div>
 
     <script>
@@ -72,18 +58,6 @@
 
         function handleCredentialResponse(response) {
             responsePayload = decodeJwtResponse(response.credential);
-
-            document.getElementById('sign-in-page').style.display = 'none';
-            document.getElementById('home-page').style.display = 'block';
-            document.getElementById('email-display').textContent = "Signed in as: " + responsePayload.email;
-            document.getElementById('signout-button').disabled = false;
-
-            console.log("ID: " + responsePayload.sub);
-            console.log('Full Name: ' + responsePayload.name);
-            console.log('Given Name: ' + responsePayload.given_name);
-            console.log('Family Name: ' + responsePayload.family_name);
-            console.log("Image URL: " + responsePayload.picture);
-            console.log("Email: " + responsePayload.email);
 
             fetch('/tokensignin', {
                 method: 'POST',
@@ -110,30 +84,7 @@
             return JSON.parse(jsonPayload);
         }
 
-        function signOut() {
-            google.accounts.id.revoke(responsePayload.email, done => {
-                console.log('User signed out.');
-                document.getElementById('sign-in-page').style.display = 'block';
-                document.getElementById('home-page').style.display = 'none';
-                document.getElementById('email-display').textContent = "";
-                document.getElementById('signout-button').disabled = true;
-            });
-        }
-
-        function showSignUp() {
-            document.getElementById('sign-in-page').style.display = 'block';
-            document.getElementById('home-page').style.display = 'none';
-        }
-
-        function showSignIn() {
-            document.getElementById('sign-in-page').style.display = 'block';
-            document.getElementById('home-page').style.display = 'none';
-        }
-
-        function handleSignUp() {
-            // Handle sign up logic here
-            console.log('Sign Up clicked');
-        }
+    
 
         window.onload = function () {
             google.accounts.id.initialize({
@@ -146,6 +97,7 @@
             );
             google.accounts.id.prompt();
         };
+        
     </script>
 
     <script src="https://accounts.google.com/gsi/client" async defer></script>
