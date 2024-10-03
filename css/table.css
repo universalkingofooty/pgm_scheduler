@@ -218,9 +218,7 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     color: #fff; /* Link color */
 }
 
-.container {
-    margin-top: 20px;
-}
+
 
 #searchbar {
     width: 250px;

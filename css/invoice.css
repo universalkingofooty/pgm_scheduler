@@ -8,10 +8,10 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-#left {
+/* #left {
     background-image: radial-gradient(#004102, #131313 50%);
     height: 200vh;
-}
+} */
 
 .container-sty {
     background-color: white;
@@ -19,7 +19,7 @@ body {
     width: 100%;
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
     background-image: radial-gradient(#004102, #131313 50%);
     border: none;
 }
@@ -32,7 +32,7 @@ body {
 .dropdown-item:hover {
     background-image: radial-gradient(#004102, #131313 50%);
     color: white;
-}
+} */
 
 .content {
     color: white;
@@ -136,9 +136,7 @@ a{
     font-size: small;
 }
 
-#list-group-flush{
-    margin-left: 60px;
-}
+
 .pagination {
     margin: 10px 0;
     text-align: right;
@@ -200,7 +198,7 @@ td.details-control::before {
     
 }
 
-.list-group-item {
+/* .list-group-item {
     background: transparent;
     color: white;
     font-size: small;
@@ -219,7 +217,7 @@ td.details-control::before {
 .list-group-item-action:focus {
     background-color: transparent;
     color: white;
-}
+} */
 
 @media (max-width: 1200px) {
     #left {
