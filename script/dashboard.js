@@ -1,25 +1,8 @@
-document.querySelectorAll(".toggleDesc").forEach(function (btn) {
-    btn.addEventListener("click", function (event) {
-        event.preventDefault();
-        const target = event.target.getAttribute('data-target');
-        const shortDesc = document.getElementById("shortDesc" + target);
-        const fullDesc = document.getElementById("fullDesc" + target);
 
-        if (fullDesc.classList.contains("d-none")) {
-            shortDesc.classList.add("d-none");
-            fullDesc.classList.remove("d-none");
-        } else {
-            fullDesc.classList.add("d-none");
-            shortDesc.classList.remove("d-none");
-        }
-    });
+document.getElementById('sidebarToggle').addEventListener('click', function () {
+    var sidebar = document.getElementById('left');
+    sidebar.classList.toggle('active');
 });
-
-function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('show');
-}
-
 
 const dataSets = {
     '12months': {

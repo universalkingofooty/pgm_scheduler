@@ -8,11 +8,13 @@
 }
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+ 
 }
 
 #left {
     background-image: radial-gradient(#004102, #131313 50%);
     height: 200vh;
+   
 }
 
 .container-sty {
@@ -210,13 +212,13 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     text-align: center;
 }
 
-#sidebar {
-    background-color: #202020; /* Sidebar background color */
+/* #sidebar {
+    background-color: #202020; 
 }
 
 #sidebar a {
-    color: #fff; /* Link color */
-}
+    color: #fff; 
+} */
 
 
 
@@ -357,7 +359,7 @@ a {
     align-items: center;
 }
 
-.list-group-item {
+/* .list-group-item {
     background: transparent !important;
     color: white !important;
     font-size: small !important;
@@ -367,7 +369,7 @@ a {
 .list-group-item-action {
     background: transparent !important;
     color: white !important;
-}
+} */
 
 .note .list-group-item {
     position: relative !important;
