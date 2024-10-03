@@ -16,8 +16,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="css/home_profile.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <!-- <link rel="stylesheet" href="final.css"> -->
+
 </head>
 <style>
     .list-group-item {
@@ -307,7 +306,7 @@
 </style>
 
 <body>
-    <div id="nav"></div>
+    <div id="nav">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="col-4">
                 <button class="sidebar-toggle" id="sidebarToggle">☰</button>
@@ -320,54 +319,61 @@
             </div>
         </div>
     </div>
-
     <div class="container-fluid">
         <div class="row">
             <div class="container">
                 <div class="row">
-                     <!-- Sidebar -->
-                     <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty" id="left">
+                    <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty" id="left" style="position: fixed;">
+                        <!-- Sidebar -->
                         <div id="sidebar">
                             <div id="sidebar-header" class="m-3 mb-5">
                                 <img src="images/logo.png" alt="Sidebar Logo" style="width: 100%;">
                             </div>
                             <div id="sidebar-content">
                                 <div class="list-group list-group-flush">
-                                    <a href="dashboard.html" class="list-group-item list-group-item-action bg-purple">
-                                        <img src="icon/Mask group-2.png"><span>Dashboard</span>
-                                    </a>
+                                    <a href="dashboard.html"
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group-2.png" style="width: 25px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Dashboard</span></a>
                                     <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
-                                        id="ticketMenu" data-bs-toggle="collapse" data-bs-target="#ticketSubmenu"
-                                        aria-expanded="false" aria-controls="ticketSubmenu">
-                                        <img src="icon/Mask group-3.png"><span>Ticket</span>
+                                        id="ticketMenu" data-toggle="collapse" data-target="#ticketSubmenu"
+                                        aria-expanded="false" aria-controls="ticketSubmenu"><img
+                                            src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
+                                        <span style="padding-left: 10px;color: white;">Ticket</span>
                                     </a>
-                                    <div id="ticketSubmenu" class="collapse">
+                                    <div id="ticketSubmenu" class="collapse" >
                                         <ul class="list-group list-group-flush" id="list-group-flush">
                                             <li class="list-group-item"><a href="Unassigned.html"
-                                                    class="bg-purple">Unassigned Ticket</a></li>
+                                                    class=" bg-purple">Unassigned
+                                                    Ticket</a></li>
                                             <li class="list-group-item"><a href="Inprocess.html"
-                                                    class="bg-purple">In-Progress</a></li>
-                                            <li class="list-group-item"><a href="invoice.html" class="bg-purple">Ready
-                                                    for Invoice</a></li>
+                                                    class=" bg-purple">In-Progress</a>
+                                            </li>
+                                            <li class="list-group-item"><a href="invoice.html" class=" bg-purple">Ready
+                                                    for
+                                                    Invoice</a></li>
                                             <li class="list-group-item"><a href="completed.html"
-                                                    class="bg-purple">Completed Ticket</a></li>
+                                                    class=" bg-purple">Completed
+                                                    Ticket</a></li>
                                         </ul>
                                     </div>
                                     <a href="employee_ticket.html"
-                                        class="list-group-item list-group-item-action bg-purple">
-                                        <img src="icon/Mask group.png"><span>Employees</span>
-                                    </a>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group.png" style="width: 30px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Employees</span></a>
                                     <a href="home-profile.html"
-                                        class="list-group-item list-group-item-action bg-purple">
-                                        <img src="icon/Mask group-1.png"><span>Profile</span>
-                                    </a>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group-1.png" style="width: 30px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Profile</span></a>
                                     <div style="position: fixed; bottom: 0; display: inline-flex;" class="m-3">
-                                        <a href="#"><img src="icon/Vector.png" id="icon">Logout</a>
+                                        <img src="icon/Vector.png" id="icon">
+                                        <span class="content text-white list-group-item">Logout</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <!-- Right Column: Profile Form -->
                     <div class="col-sm-12 col-xl-10 col-md-10 col-lg-10 col-sty" id="fix">
                         <p
@@ -398,23 +404,11 @@
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="username" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">Username</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="companyAddress" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">Company Address</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
                                         <div class="material-textfield">
-                                            <input id="email" placeholder=" " type="email" class="input-sty">
-                                            <label class="label-sty">Email</label>
+                                            <input type="tel" id="phone" name="phoneNumber" placeholder=" "
+                                                class="input-sty">
+                                            <label>Phone Number</label>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -436,22 +430,35 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <div class="material-textfield">
-                                            <input type="tel" id="phone" name="phoneNumber" placeholder=" "
-                                                class="input-sty">
-                                            <label>Phone Number</label>
-                                            <br>
-                                            <span class=" text-danger d-flex justify-content-center"
-                                                id="showMsg3"></span>
+                                        <div class="material-textfield mb-4">
+                                            <input id="street" placeholder=" " type="text" class="input-sty">
+                                            <label class="label-sty">Street</label>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="address" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty" id="address_lable">Address</label>
-                                            <span class="text-danger" id="errorEmail"></span>
+                                        <div class="material-textfield">
+                                            <input id="city" placeholder=" " type="text" class="input-sty">
+                                            <label class="label-sty">City</label>
                                         </div>
                                     </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="material-textfield">
+                                            <input type="text" id="zip" name="zip" placeholder=" "
+                                                class="input-sty">
+                                            <label>Zip</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="material-textfield">
+                                            <input type="email" id="zip" name="email" placeholder=" "
+                                                class="input-sty">
+                                            <label>Email</label>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                                 <div class="d-flex justify-content-center">
                                     <button type="submit" class="btn-green float-end">Edit</button>

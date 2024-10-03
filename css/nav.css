@@ -1,7 +1,7 @@
  /* Custom styles for the sidebar */
  #left {
     background-image: radial-gradient(#004102, #131313 50%);
-    height: 100vh;
+    height: 150vh !important;
 }
 
 .list-group-item {
