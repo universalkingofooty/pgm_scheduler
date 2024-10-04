@@ -230,10 +230,6 @@ table.dataTable tbody tr:hover {
     color: #fff; /* Link color */
 }
 
-.container {
-    margin-top: 20px;
-}
-
 #searchbar {
     width: 250px;
     padding: 8px;
