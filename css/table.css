@@ -8,13 +8,11 @@
 }
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
- 
 }
 
 #left {
     background-image: radial-gradient(#004102, #131313 50%);
     height: 200vh;
-   
 }
 
 .container-sty {
@@ -31,7 +29,9 @@ body {
 .dropdown-item {
     color: white;
 }
-
+#whole-table{
+    border-radius: 10px;
+}
 .dropdown-item:focus,
 .dropdown-item:hover {
     background-image: radial-gradient(#004102, #131313 50%);
@@ -85,6 +85,10 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     box-shadow: none; /* Remove default shadow for all cells in odd rows */
 }
 
+/* Custom hover effect for all rows */
+table.dataTable tbody tr:hover {
+    background-color: #f1f1f1 !important; /* Light gray for hover */
+}
 
 .details-row {
     background-color: #c7cdd3;
@@ -140,9 +144,9 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-#rejectedTicketTable td .issue-type.Fridge .circle,
-#unassignedTicketTable td .issue-type.Fridge .circle,
-#ticketTable td .issue-type.Fridge .circle{
+#rejectedTicketTable td .issue-type.fridge .circle,
+#unassignedTicketTable td .issue-type.fridge .circle,
+#ticketTable td .issue-type.fridge .circle{
     background-color: #04b9f6; /* Fridge color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -157,9 +161,9 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     background-color: #f6eec9;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-#rejectedTicketTable td .issue-type.Fridge ,
-#unassignedTicketTable td .issue-type.Fridge,
-#ticketTable td .issue-type.Fridge
+#rejectedTicketTable td .issue-type.fridge ,
+#unassignedTicketTable td .issue-type.fridge,
+#ticketTable td .issue-type.fridge
  {
     background-color: #caedf8; 
 }
@@ -193,6 +197,12 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#rejectedTicketTable tbody tr:hover,
+#unassignedTicketTable tbody tr:hover,
+#ticketTable tbody tr:hover
+{
+    background-color: #f1f1f1;
+}
 
 #rejectedTicketTable tbody td,
 #unassignedTicketTable tbody td,
@@ -212,15 +222,17 @@ table.dataTable.table-striped > tbody > tr.odd > * {
     text-align: center;
 }
 
-/* #sidebar {
-    background-color: #202020; 
+#sidebar {
+    background-color: #202020; /* Sidebar background color */
 }
 
 #sidebar a {
-    color: #fff; 
-} */
+    color: #fff; /* Link color */
+}
 
-
+.container {
+    margin-top: 20px;
+}
 
 #searchbar {
     width: 250px;
@@ -290,8 +302,9 @@ a {
 }
 
 #whole-table {
-    border: 1px solid;
+    border: 1px ;
     padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -300,24 +313,110 @@ a {
     content: "⮟";
 }
 
-.pagination {
-    margin: 10px 0;
-    text-align: right;
+
+/* DataTables Pagination Styles */
+
+
+/* Pagination styles */
+
+
+
+
+/* .dataTables_wrapper .dataTables_paginate .pagination .page-link {
+    display: inline-block;
+    padding: 10px 15px; 
+    border-radius: 25px;
+    border: 1px solid #006103; 
+    background-color: #f8faf8; 
+    color: #006103; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    font-weight: bold; 
+} */
+
+
+
+/* Pagination button styles */
+/* Main pagination container */
+.dataTables_wrapper .dataTables_paginate {
+    display: flex !important; /* Use flexbox for alignment */
+    justify-content: center; /* Center pagination */
+    margin: 20px 0; /* Margin around the pagination */
 }
 
-.pagination button {
-    background-color: #6a1b9a;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin: 0 2px;
-    cursor: pointer;
+/* Pagination list */
+.dataTables_wrapper .dataTables_paginate .pagination {
+    display: flex; /* Flexbox layout */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    list-style: none; /* No bullet points */
 }
 
-.pagination button.disabled {
-    background-color: #ddd;
-    cursor: not-allowed;
+/* Pagination buttons */
+.dataTables_wrapper .dataTables_paginate .pagination .page-item {
+    margin: 0 3px; /* Reduced space between buttons */
 }
+
+/* Page links */
+.dataTables_wrapper .dataTables_paginate .pagination .page-link {
+    color: #006103 !important; /* Default text color */
+    background-color: transparent !important; /* No background */
+    border: 1px solid #006103; /* Green border */
+    border-radius: 50px; /* Rounded corners */
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 0.85rem; /* Reduced font size */
+    text-align: center; /* Center text */
+     /* Ensure inline-block display */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+
+
+/* Hover styles for pagination links */
+.dataTables_wrapper .dataTables_paginate .pagination .page-link:hover {
+    color: white !important; /* Text color on hover */
+    background-color: #006103 !important; /* Background color on hover */
+}
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.active {
+    
+    padding: none;
+   box-shadow: none;
+    background:none;/* Hide the active page number */
+}
+
+
+/* Disabled button styles */
+.dataTables_wrapper .dataTables_paginate .pagination .disabled .page-link {
+    color: rgb(255, 253, 253) !important; /* Color for disabled links */
+    background-color: #99b29a !important; /* Ensure no background */
+    pointer-events: none; /* Disable pointer events */
+    border: transparent;
+}
+
+/* Styles for the Previous and Next buttons */
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.previous,
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.next {
+    font-weight: bold; /* Make text bold */
+}
+
+/* Styles for the Previous and Next links */
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.previous .page-link,
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.next .page-link {
+    background-color: #f8f9fa; /* Light background for Previous and Next */
+    color: #006103; /* Text color */
+    border-radius: 50px; /* Rounded corners */
+    padding: 5px 10px; /* Reduced padding for Previous and Next */
+    font-size: 0.85rem; /* Reduced font size for Previous and Next */
+}
+
+/* Hover styles for Previous and Next links */
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.previous .page-link:hover,
+.dataTables_wrapper .dataTables_paginate .pagination .page-item.next .page-link:hover {
+    background-color: #006103 !important; /* Dark green background on hover */
+    color: white !important; /* White text on hover */
+}
+
+
 
 #searchInput {
     margin-top: 10px;
@@ -354,12 +453,9 @@ a {
     margin-right: 10px;
 }
 
-.dataTables_paginate {
-    display: flex;
-    align-items: center;
-}
 
-/* .list-group-item {
+
+.list-group-item {
     background: transparent !important;
     color: white !important;
     font-size: small !important;
@@ -369,7 +465,7 @@ a {
 .list-group-item-action {
     background: transparent !important;
     color: white !important;
-} */
+}
 
 .note .list-group-item {
     position: relative !important;
@@ -396,9 +492,7 @@ a {
     float: right;
 }
 
-.dataTables_paginate {
-    float: right;
-}
+
 
 td.details-control {
     cursor: pointer;
@@ -425,7 +519,11 @@ tr.shown td.details-control {
     transition: background-color 0.2s ease;
 }
 
-
+#rejectedTicketTable tbody tr:hover,
+#unassignedTicketTable tbody tr:hover,
+#ticketTable tbody tr:hover {
+    background-color: #e0e0e0;
+}
 
 #rejectedTicketTable td,
 #unassignedTicketTable td,
