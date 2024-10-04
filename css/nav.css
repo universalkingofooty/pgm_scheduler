@@ -1,0 +1,141 @@
+ /* Custom styles for the sidebar */
+ #left {
+    background-image: radial-gradient(#004102, #131313 50%);
+    height: 150vh !important;
+}
+
+.list-group-item {
+    color: white;
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: transparent;
+    color: white !important;
+}
+
+.list-group-item:focus {
+    background-color: transparent;
+    color: white !important;
+}
+
+.bg-purple {
+    background-color: transparent !important;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hide navigation bar on larger screens */
+#nav {
+    display: none;
+}
+
+.list-group-item {
+    background: transparent;
+    color: white;
+    font-size: small;
+    border: none;
+}
+
+.list-group-item span {
+    padding-left: 10px;
+}
+
+#list-group-flush {
+    margin-left: 40px;
+}
+
+#nav {
+    background-image: radial-gradient(#004102, #131313 50%);
+    padding: 20px;
+}
+
+/* Show navigation bar on mobile devices */
+@media (max-width: 998px) {
+    #nav {
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    #header_admin{
+        display: none;
+    }
+
+    #sidebar-header {
+        display: none;
+    }
+
+    #left {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 30%;
+        height: 100vh;
+        z-index: 999;
+        background-color: #ff0000;
+        transition: all 0.3s ease;
+        margin-top: 12%;
+        padding-top: 20px;
+    }
+
+    #left.active {
+        left: 0;
+    }
+
+    .sidebar-toggle {
+        display: block;
+        background-color: transparent;
+        color: white;
+        border: none;
+        width: 10%;
+        top: 0px;
+        left: 0px;
+        z-index: 1001;
+    }
+
+    body.active {
+        overflow: hidden;
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 530px) {
+    #left {
+        width: 40%;
+        margin-top: 13%;
+    }
+}
+
+@media (max-width: 450px) {
+    #left {
+        width: 50%;
+        margin-top: 14%;
+    }
+}
+
+
+@media (max-width:330px) {
+    #left {
+        width: 70%;
+        padding-top: 20%;
+    }
+   
+}
+
+/* Default for desktop view */
+@media (min-width: 998px) {
+    .sidebar-toggle {
+        display: none;
+    }
+
+    #left {
+        position: static;
+        left: 0;
+        height: 100vh;
+    }
+}

@@ -14,7 +14,7 @@ body {
 }
 
 #left {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     height: 140vh;
 }
 
@@ -38,7 +38,7 @@ body {
 }
 
 .login-button {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     color: white;
     width: 100%;
     border: none;
@@ -82,7 +82,6 @@ input::placeholder {
 
 @media (max-width: 1200px) {
     #left {
-        height: auto;
         padding: 40px 0;
     }
 
@@ -130,14 +129,14 @@ input::placeholder {
 }
 
 .dropdown-menu {
-    background-color: #7706CD;
+    background-color:transparent;
     border: none;
 
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: #7706CD;
+    background: transparent;
     color: white;
 }
 
@@ -163,7 +162,16 @@ i,
     padding-left: 18%;
     color: white;
 }
+.list-group-item-action:focus {
+    background-color: transparent;
+    color: white;
+
+}
 
 a{
+    color: white;
     text-decoration: none;
+}
+#list-group-flush{
+    margin-left: 60px;
 }

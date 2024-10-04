@@ -9,7 +9,7 @@ body {
 }
 
 #left {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     height: 200vh;
 }
 
@@ -21,14 +21,14 @@ body {
 
 
 .dropdown-menu {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     border: none;
 
 }
 
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: #7706CD;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     color: white;
 }
 
@@ -158,14 +158,14 @@ i,
 }
 
 .details-row .btn-assign {
-    background-color: #6f42c1;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     color: #fff;
     padding: 10px 10px 10px 10px;
     width: 100%;
 }
 
 .details-row .btn-reject {
-    border: 1px solid #6f42c1;
+    background-image: radial-gradient(#004102 ,#131313 50%);
     color: #6f42c1;
     background-color: transparent;
     width: 100%;
@@ -198,13 +198,10 @@ td{
 }
 
 #table {
-    margin-left: -3%;
-    margin-right: -3%;
     width: 100%;
 }
 .table thead  tr th {
-    background-color:  #6f42c1;
-    color: white;
+    color: #083a0a;
     font-weight: bold;
     padding: 10px;
     text-align: centre !important;
@@ -281,6 +278,7 @@ th, td
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+  
 }
 th 
 {
@@ -364,7 +362,7 @@ tr.shown td.details-control {
 }
 .list-group-item 
 {
-    background-color: #7706CD !important;
+    background:transparent !important;
     color: white !important;
     font-size: small !important;
     border: none !important;
@@ -372,7 +370,7 @@ tr.shown td.details-control {
 
 
 .list-group-item-action {
-    background-color: #7706CD !important;
+    background:transparent !important;
     color: white !important;
 
 }
