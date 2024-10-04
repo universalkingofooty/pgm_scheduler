@@ -92,11 +92,13 @@ $(document).ready(function () {
                             </select>
                             <small>Pending work: <span class="pending-work">${rowData.employees[0].pending}</span></small>
                         </div>
+                        <div class="col-md-1"></div>
                         <div class="col-md-6">
                             <strong>Description:</strong>
-                            <p class="description">${rowData.description}</p>
-                             <div class="col-6">
-                                     <div class="image-gallery">
+                            <div class="row">
+                                <p class="description">${rowData.description}</p>
+                                <div class="col-6">
+                                    <div class="image-gallery">
                                         <img src="images/profile img.png" alt="Image 1" width="100px">
                                         <div class="image-container">
                                             <img src="images/profile img.png" alt="Image 1">
@@ -108,12 +110,14 @@ $(document).ready(function () {
                                         
                                         </div>
                                     </div>
-                    </div>
-                            <div class="button-container">
-                            <button class="btn btn-assign" disabled>Assign</button>
-                             <button class="btn btn-reject" >Reject</button>
+                                </div>
+                                <div class="col-6">
+                                    <div class="button-container">
+                                        <button class="btn btn-assign" disabled>Assign</button>
+                                        <button class="btn btn-reject mt-3" >Reject</button>
+                                    </div>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
                 </td>

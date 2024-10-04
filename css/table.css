@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: #52525b;
 }
 .span {
     float: inline-end;
@@ -66,7 +65,7 @@ i,
 /* Custom styles for alternating row colors in DataTable */
 table.dataTable.table-striped > thead{
     background: none;
-    color:#006103;
+    color:#004102;
 
 }
 /* Apply a light green background for odd rows */
@@ -100,8 +99,8 @@ table.dataTable tbody tr:hover {
 }
 
 .button-container {
-    display: flex; /* Use Flexbox to align the buttons horizontally */
-    gap: 10px; /* Optional: Adds space between the buttons */
+     /* Use Flexbox to align the buttons horizontally */
+     /* Optional: Adds space between the buttons */
     justify-content: flex-start; /* Align the buttons to the left (or you can use 'center' or 'flex-end') */
 }
 
@@ -112,24 +111,22 @@ table.dataTable tbody tr:hover {
     justify-content: center;
 }
 
-.details-row .btn-assign,
-.details-row .btn-restore {
-    background-image: radial-gradient(#004102, #131313 50%);
-    color: #fff;
-    padding: 10px;
-    width: 50%;
-    border-radius: 10px;
-}
 
+.btn-assign{
+    background:#004102 !important;
+    color: white !important;
+    padding: 6px !important;
+    width: 50% !important;
+    border-radius: 10px !important;
+    font-size: small !important;
+}
 .details-row .btn-reject {
-    color: #ff0606;
+    color: #004102;
     background-color: transparent;
-    padding: 10px;
+    padding: 6px;
     width: 50%;
-    border-radius: 10px;
-    background: linear-gradient(white, white) padding-box,
-        linear-gradient(to right, #004102, #131313) border-box;
-    border: 4px solid transparent;
+    border-radius: 10px;    
+    border: 1px solid #004102;
 }
 
 .details-row .btn-assign i,
@@ -220,10 +217,6 @@ table.dataTable tbody tr:hover {
 #unassignedTicketTable tbody tr td:first-child,
  #ticketTable tbody tr td:first-child{
     text-align: center;
-}
-
-#sidebar {
-    background-color: #202020; /* Sidebar background color */
 }
 
 #sidebar a {
@@ -318,17 +311,7 @@ a {
 
 
 
-/* .dataTables_wrapper .dataTables_paginate .pagination .page-link {
-    display: inline-block;
-    padding: 10px 15px; 
-    border-radius: 25px;
-    border: 1px solid #006103; 
-    background-color: #f8faf8; 
-    color: #006103; 
-    text-decoration: none; 
-    transition: background-color 0.3s ease, color 0.3s ease; 
-    font-weight: bold; 
-} */
+
 
 
 
@@ -358,8 +341,8 @@ a {
     color: #006103 !important; /* Default text color */
     background-color: transparent !important; /* No background */
     border: 1px solid #006103; /* Green border */
-    border-radius: 50px; /* Rounded corners */
-    padding: 5px 10px; /* Reduced padding */
+    border-radius: 0px; /* Rounded corners */
+    padding: 8px 15px; /* Reduced padding */
     font-size: 0.85rem; /* Reduced font size */
     text-align: center; /* Center text */
      /* Ensure inline-block display */
@@ -400,8 +383,8 @@ a {
 .dataTables_wrapper .dataTables_paginate .pagination .page-item.next .page-link {
     background-color: #f8f9fa; /* Light background for Previous and Next */
     color: #006103; /* Text color */
-    border-radius: 50px; /* Rounded corners */
-    padding: 5px 10px; /* Reduced padding for Previous and Next */
+    border-radius: 10px; /* Rounded corners */
+    padding: 8px 15px; /* Reduced padding for Previous and Next */
     font-size: 0.85rem; /* Reduced font size for Previous and Next */
 }
 
@@ -537,7 +520,7 @@ tr.shown td.details-control {
 #ticketTable td .circle {
     width: 8px;
     height: 8px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin-right: 5px;
 }
 #rejectedTicketTable td div ,

@@ -91,24 +91,29 @@ $(document).ready(function () {
                             </select>
                             <small>Pending work: <span class="pending-work">${rowData.employees[0].pending}</span></small>
                         </div>
-                        <div class="col-md-6">
-                            <strong>Description:</strong>
-                            <p class="description">${rowData.description}</p>
-                            <div class="col-6">
-                                <div class="image-gallery">
-                                    <img src="images/profile img.png" alt="Image 1" width="100px">
-                                    <div class="image-container">
-                                        <img src="images/profile img.png" alt="Image 1">
-                                        <div class="overlay">+3</div>
-                                    </div>
-                                    <div class="thumbnail-container" id="additional-images" style="display: none;">
-                                        <img src="images/profile img.png" alt="Additional Image 1">
-                                        <img src="images/profile img.png" alt="Additional Image 2">
+                        <div class="col-md-7">
+                            <div class="row">
+                                <strong>Description:</strong>
+                                <p class="description">${rowData.description}</p>
+                                <div class="col-2"></div>
+                                <div class="col-6">
+                                    <div class="image-gallery">
+                                        <img src="images/profile img.png" alt="Image 1" width="100px">
+                                        <div class="image-container">
+                                            <img src="images/profile img.png" alt="Image 1">
+                                            <div class="overlay">+3</div>
+                                        </div>
+                                        <div class="thumbnail-container" id="additional-images" style="display: none;">
+                                            <img src="images/profile img.png" alt="Additional Image 1">
+                                            <img src="images/profile img.png" alt="Additional Image 2">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="button-container">
-                                <button class="btn btn-assign" >Reassign</button>
+                                <div class="col-4">
+                                    <div class="button-container">
+                                        <button class="btn btn-assign">Reassign</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

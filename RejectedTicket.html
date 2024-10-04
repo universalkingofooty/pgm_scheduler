@@ -12,7 +12,7 @@
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
-    <!-- <link rel="stylesheet" href="css/paddingTicket.css"> -->
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/image.css">
     <link rel="stylesheet" href="css/table.css">
 </head>
@@ -22,9 +22,8 @@
         <div class="row">
             <div class="container">
                 <div class="row">
-
-                      <!-- Sidebar -->
-                      <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty" id="left">
+                    <!-- Sidebar -->
+                    <div class="col-sm-12 col-xl-2 col-md-2 col-lg-2 col-sty" id="left">
                         <!-- Sidebar -->
                         <div id="sidebar">
                             <div id="sidebar-header" class="m-3 mb-5">
@@ -33,27 +32,38 @@
                             <div id="sidebar-content">
                                 <div class="list-group list-group-flush">
                                     <a href="dashboard.html"
-                                        class="list-group-item list-group-item-action bg-purple"><img src="icon/Mask group-2.png" style="width: 25px;margin-top: -5px;"><span style="padding-left: 10px;color: white;">Dashboard</span></a>
-                                        <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
-                                            id="ticketMenu" data-bs-toggle="collapse" data-bs-target="#ticketSubmenu"
-                                            aria-expanded="false" aria-controls="ticketSubmenu">
-                                            <img src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
-                                            <span style="padding-left: 10px;color: white;">Ticket</span>
-                                            </a>
-                                    
-                                            <div id="ticketSubmenu" class="collapse">
-                                                <ul class="list-group list-group-flush">
-                                                    <li class="list-group-item"><a href="Unassigned.html">Unassigned Tickets</a></li>
-                                                    <li class="list-group-item"><a href="Inprocess.html"class=" bg-purple">In-Progress</a></li>
-                                                    <li class="list-group-item"><a href="invoice.html" class=" bg-purple">ReadyForInvoice</a></li>
-                                                    <li class="list-group-item"><a href="completed.html">Completed Ticket</a></li>
-                                                    <li class="list-group-item"><a href="RejectedTicket.html">RejectedTicket</a></li>
-                                                </ul>
-                                            </div>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group-2.png" style="width: 25px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Dashboard</span></a>
+                                    <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
+                                        id="ticketMenu" data-bs-toggle="collapse" data-bs-target="#ticketSubmenu"
+                                        aria-expanded="false" aria-controls="ticketSubmenu">
+                                        <img src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
+                                        <span style="padding-left: 10px;color: white;">Ticket</span>
+                                    </a>
+
+                                    <div id="ticketSubmenu" class="collapse">
+                                        <ul class="list-group list-group-flush" id="list-group-flush">
+                                            <li class="list-group-item"><a href="Unassigned.html">Unassigned Tickets</a>
+                                            </li>
+                                            <li class="list-group-item"><a href="Inprocess.html"
+                                                    class=" bg-purple">In-Progress</a></li>
+                                            <li class="list-group-item"><a href="invoice.html"
+                                                    class=" bg-purple">ReadyForInvoice</a></li>
+                                            <li class="list-group-item"><a href="completed.html">Completed Ticket</a>
+                                            </li>
+                                            <li class="list-group-item"><a href="RejectedTicket.html">RejectedTicket</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                     <a href="employee_ticket.html"
-                                        class="list-group-item list-group-item-action bg-purple"><img src="icon/Mask group.png" style="width: 30px;margin-top: -5px;"><span style="padding-left: 10px;color: white;">Employees</span></a>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group.png" style="width: 30px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Employees</span></a>
                                     <a href="home-profile.html"
-                                        class="list-group-item list-group-item-action bg-purple"><img src="icon/Mask group-1.png" style="width: 30px;margin-top: -5px;"><span style="padding-left: 10px;color: white;">Profile</span></a>
+                                        class="list-group-item list-group-item-action bg-purple"><img
+                                            src="icon/Mask group-1.png" style="width: 30px;margin-top: -5px;"><span
+                                            style="padding-left: 10px;color: white;">Profile</span></a>
                                     <div style="position: fixed; bottom: 0; display: inline-flex;" class="m-3">
                                         <img src="icon/Vector.png" id="icon">
                                         <span class="content text-white list-group-item">Logout</span>
@@ -72,12 +82,12 @@
 
                         <div class="container container-sty">
                             <h1 class="text-center m-3 mt-5 fw-bold ">Rejected-Ticket</h1>
-                             <div class="container-fluid mt-5" id="table">
+                            <div class="container-fluid mt-5" id="table">
                                 <div id="whole-table">
                                     <!-- Table -->
                                     <table id="rejectedTicketTable" class="table table-striped table-hover">
                                         <thead>
-                                            <tr >
+                                            <tr>
                                                 <th></th>
                                                 <th>Ticket ID</th>
                                                 <th>Issue Type</th>
@@ -88,8 +98,46 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
-                                            <!-- Add more rows as needed -->
+                                            <tr class="main-row" data-ticket-id="007">
+                                                <td class="details-control"></td>
+                                                <td>007</td>
+                                                <td>
+                                                    <div class="issue-type ac"><span class="circle"></span> AC</div>
+                                                </td>
+                                                <td>Rohith</td>
+                                                <td>01234 56789</td>
+                                                <td>12/12/2024</td>
+                                                <td>Ashok Nagar</td>
+
+
+
+                                            </tr>
+                                            <tr class="main-row" data-ticket-id="008">
+                                                <td class="details-control"></td>
+                                                <td>008</td>
+                                                <td>
+                                                    <div class="issue-type fridge"><span class="circle"></span>Fridge
+                                                    </div>
+                                                </td>
+                                                <td>Karthik</td>
+                                                <td>09876 54321</td>
+                                                <td>13/12/2024</td>
+                                                <td>Besant Nagar</td>
+
+
+                                            </tr>
+                                            <tr class="main-row" data-ticket-id="009">
+                                                <td class="details-control"></td>
+                                                <td>009</td>
+                                                <td>
+                                                    <div class="issue-type fridge"><span class="circle"></span>Fridge
+                                                    </div>
+                                                </td>
+                                                <td>Sharma</td>
+                                                <td>09876 54321</td>
+                                                <td>13/12/2024</td>
+                                                <td>Besant Nagar</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -111,7 +159,7 @@
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="script/rejectTable.js"></script>
-   
+
 </body>
 
 </html>
