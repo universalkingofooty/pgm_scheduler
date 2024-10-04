@@ -10,7 +10,7 @@ body {
 
 #left {
     background-image: radial-gradient(#004102, #131313 50%);
-    height: 200vh;
+    height: 100vh;
 }
 
 .container-sty {
@@ -54,7 +54,6 @@ body {
     top: 12px;
     color: #ced4da;
 }
-
 
 .details-row {
     background-color: #f8f9fa;
@@ -113,12 +112,13 @@ tr:nth-child(even) {
 #ticketTable th,
 #ticketTable td {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: none; /* Remove table cell borders */
+    border-top:1px solid #ccc;
 }
 
 #whole-table {
-    border: 1px solid;
     padding: 20px;
+    border: none; /* Remove outer table border */
 }
 
 th,
@@ -130,7 +130,15 @@ th {
     background-color: #6a1b9a;
     color: white;
 }
+a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
 
+#list-group-flush{
+    margin-left: 60px;
+}
 .pagination {
     margin: 10px 0;
     text-align: right;
@@ -187,6 +195,7 @@ td.details-control {
 td.details-control::before {
     content: "▼";
     padding-right: 5px;
+    
 }
 
 .list-group-item {
@@ -196,7 +205,6 @@ td.details-control::before {
     border: none;
 }
 
-
 .list-group-item-action {
     background-color: transparent;
     color: white;
@@ -205,20 +213,10 @@ td.details-control::before {
 .list-group-item-action:hover {
     background-color: transparent;
     color: white;
-
 }
 .list-group-item-action:focus {
     background-color: transparent;
     color: white;
-
-}
-
-a{
-    color: white;
-    text-decoration: none;
-}
-#list-group-flush{
-    margin-left: 60px;
 }
 
 @media (max-width: 1200px) {
