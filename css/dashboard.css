@@ -8,15 +8,15 @@ body {
    
     margin: 0;
     padding: 0;
+    overflow-y: auto !important;
     overflow-x: hidden !important;
     /* overflow-y: hidden; */
 }
 #left {
     background-image: radial-gradient(#004102 ,#131313 50%);
-
+    position: fixed;
     height: 200vh;
 }
-
 
 /* List Group Item */
 .note .list-group-item {
@@ -114,7 +114,7 @@ body {
 
 .chart-container2 {
     background-color: white;
-    padding: 10px 15px 40px;
+    padding: 10px 15px 60px;
     border-radius: 10px;
     width: 100%;
     height: 255px;
@@ -159,6 +159,8 @@ body {
 #fix {
    
     background-color: #e9e9e9; /* Optional background color */
+    position: relative;
+    margin-left: 210px !important;
      
 }
 
@@ -403,10 +405,11 @@ h1{
 
 @media (max-width: 992px) {
     .container-sty {
-        padding: 20px;
+        padding: 2px;
     }
     #fix span{
         display:block;
+        
     }
     #sidebar{
         display: block;
@@ -444,6 +447,7 @@ h1{
     .container-sty {
         width: 100%;
         padding: 15px;
+       
     }
 
     .content {
@@ -451,6 +455,7 @@ h1{
         padding-left: 2%;
        
     }
+   
     #fix span{
         display: none;
     }

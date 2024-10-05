@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: #52525b;
 }
 .span {
     float: inline-end;
@@ -222,9 +221,7 @@ table.dataTable tbody tr:hover {
     text-align: center;
 }
 
-#sidebar {
-    background-color: #202020; /* Sidebar background color */
-}
+
 
 #sidebar a {
     color: #fff; /* Link color */

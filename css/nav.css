@@ -1,5 +1,4 @@
- /* Custom styles for the sidebar */
- #left {
+#left {
     background-image: radial-gradient(#004102, #131313 50%);
     height: 150vh !important;
 }
@@ -169,6 +168,6 @@ a {
     #left {
         position: static;
         left: 0;
-        height: 100vh;
+        height:100vh;
     }
 }
