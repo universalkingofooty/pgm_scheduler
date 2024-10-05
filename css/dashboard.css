@@ -8,15 +8,17 @@ body {
    
     margin: 0;
     padding: 0;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
+    overflow-x: hidden;
     /* overflow-y: hidden; */
 }
 #left {
-    background-image: radial-gradient(#004102 ,#131313 50%);
-    position: fixed;
-    height: 200vh;
+    background-color: #7706CD;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+  
 }
+
 
 /* List Group Item */
 .note .list-group-item {
@@ -159,12 +161,40 @@ body {
 #fix {
    
     background-color: #e9e9e9; /* Optional background color */
-    position: relative;
-    margin-left: 210px !important;
      
 }
 
 
+#sidebar {
+    background-color: #7706CD;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: -200px; /* Adjusted to match width */
+    z-index: 999;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.visible {
+    left: 0;
+}
+
+/* Overlay Style */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+}
 
 /* Sidebar Links */
 .list-group-item {
@@ -389,85 +419,37 @@ h1{
     }
 }
 
-/* vddjff sakthi code  */
-@media (max-width: 1200px) {
-    #left {
-        display: none;
-        height: auto;
-        padding: 40px 0;
-        
+/* Hide Toggle Button on Larger Screens */
+@media (max-width: 900px) {
+    /* #toggleButton {
+        display: none; 
+    } */
+    /* .logo {
+        display: none; 
+    } */
+
+    #sidebar {
+        left:-250px !important; /* Sidebar visible by default on larger screens */
     }
 
-    .container-sty {
-        width: 90%;
-    }
+  
 }
-
-@media (max-width: 992px) {
-    .container-sty {
-        padding: 2px;
+@media (min-width: 1024px) {
+    #toggleButton {
+        display: none; /* Hide toggle button on larger screens */
     }
-    #fix span{
-        display:block;
-        
-    }
-    #sidebar{
-        display: block;
-    }
+    .res{
     
-    .mobile{
-        display: none !important;
-    }
-    .navbar{
-        display: flex !important;
-    }
-}
-
-
- @media (min-width:762px) {
-    .container-sty {
-        padding: 20px;
-    }
-    #fix span {
-        display:block;
-    }
-    #sidebar{
-        display: block;
-    }
-    
-    .mobile{
-        display: none !important;
-    }
-    .navbar{
-        display: flex !important;
-    }
-    
- }
-@media (max-width: 768px) {
-    .container-sty {
         width: 100%;
-        padding: 15px;
-       
-    }
+            }
+            .logo {
+                display: none; /* Adjust logo position on mobile */
+            }
+            #sidebar {
+                left:  0px; /* Sidebar visible by default on larger screens */
+            }
 
-    .content {
-        color: white;
-        padding-left: 2%;
-       
-    }
-   
-    #fix span{
-        display: none;
-    }
-    #icon2 {
-        margin-left: 4%;
-    }
-    .mobile{
-        display: block !important;
-    }
-    .navbar{
-        display: flex !important;
-    }
-    
+  
 }
+
 

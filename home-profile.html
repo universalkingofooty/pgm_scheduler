@@ -16,7 +16,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="css/home_profile.css">
-
+    <!-- <link rel="stylesheet" href="final.css"> -->
 </head>
 <style>
     .list-group-item {
@@ -83,226 +83,6 @@
         bottom: 0;
         display: inline-flex;
     }
-
-
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 9999;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .overlay .spinner {
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #02066F;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-
-    .btn-outline-light:hover {
-        background-color: #02066F;
-        color: white;
-    }
-
-    .box-sty {
-        max-width: 800px;
-        background-color: white;
-        border-radius: 20px;
-        padding: 20px;
-        margin: 20px auto;
-    }
-
-    .material-textfield {
-        position: relative;
-        margin-bottom: 1.5rem;
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .material-textfield input,
-    .material-textfield textarea {
-        width: 110%;
-        padding: 0.5rem;
-        padding-top: 1rem;
-        font-size: 1rem;
-        border: 1px solid #02066F !important;
-        border-radius: 10px !important;
-        box-sizing: border-box;
-    }
-
-    .material-textfield label {
-        position: absolute;
-        top: 12px;
-        left: 0.75rem;
-        transition: all 0.3s ease;
-        background: white;
-        padding: 0 0.25rem;
-        color: #02066F;
-        pointer-events: none;
-    }
-
-    .material-textfield input:focus+label,
-    .material-textfield input:not(:placeholder-shown)+label,
-    .material-textfield textarea:focus+label,
-    .material-textfield textarea:not(:placeholder-shown)+label {
-        top: -0.75rem;
-        left: 0.75rem;
-        font-size: 0.75rem;
-        color: #02066F;
-    }
-
-    .material-textfield input:focus,
-    .material-textfield textarea:focus {
-        outline: none;
-        border-color: #02066F;
-    }
-
-    .btn-green {
-        color: white;
-        background-color: #02066F;
-        padding: 10px 30px;
-        border: none;
-        font-weight: 600;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        cursor: pointer;
-    }
-
-    .btn-green:hover {
-        opacity: 0.8;
-        color: white;
-    }
-
-    #errorLName,
-    #errorFName {
-        color: red !important;
-    }
-
-    .logo-img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .logo-sty {
-        width: 100px;
-        height: 100px;
-        border: 1px solid #02066F;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* Align icon vertically */
-        margin: 20px auto;
-    }
-
-    .logo-sty input[type="file"] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .pencil-icon {
-        position: absolute;
-        bottom: 10px;
-        /* Adjust the icon's position */
-        right: 10px;
-        font-size: 16px;
-        color: #02066F;
-        background-color: white;
-        padding: 5px;
-        border-radius: 50%;
-    }
-
-
-
-    #dropDown {
-        color: #02066F;
-    }
-
-
-    .footer-fluid {
-        margin-top: 10% !important;
-    }
-
-
-
-    .btn-outline-light:hover {
-        background-color: #02066F !important;
-        color: white !important;
-    }
-
-    .btn-outline-green {
-        color: #02066F;
-        border: solid 1px #02066F;
-        padding: 5px 21px;
-    }
-
-
-    .btn-outline-green:hover {
-        color: #02066F;
-        background-color: white;
-    }
-
-    .modal-header {
-        background-color: #02066F;
-        color: white;
-    }
-
-    @media (max-width: 576px) {
-        .material-textfield {
-            width: 100%;
-        }
-    }
-
-
-    .no {
-        color: #02066F !important;
-        border: solid 1px #02066F !important;
-        padding: 5px 21px !important;
-    }
-
-    .yes {
-        color: white;
-        background-color: #02066F !important;
-        padding: 5px 24px !important;
-    }
-
-    .yes:hover {
-        color: white;
-        background-color: #02066F !important;
-        padding: 5px 24px !important;
-    }
-
-
-    .modal-content {
-        width: 80%;
-    }
 </style>
 
 <body>
@@ -337,24 +117,22 @@
                                             style="padding-left: 10px;color: white;">Dashboard</span></a>
                                     <a class="list-group-item list-group-item-action bg-purple dropdown-toggle" href="#"
                                         id="ticketMenu" data-toggle="collapse" data-target="#ticketSubmenu"
-                                        aria-expanded="false" aria-controls="ticketSubmenu"><img
-                                            src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
+                                        aria-expanded="false" aria-controls="ticketSubmenu"><img src="icon/Mask group-3.png" style="width: 25px;margin-top: -5px;">
                                         <span style="padding-left: 10px;color: white;">Ticket</span>
                                     </a>
-                                    <div id="ticketSubmenu" class="collapse" >
-                                        <ul class="list-group list-group-flush" id="list-group-flush">
-                                            <li class="list-group-item"><a href="Unassigned.html"
-                                                    class=" bg-purple">Unassigned
+                                    <div id="ticketSubmenu" class="collapse">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><a href="paddingTicket.html"
+                                                    class=" bg-purple">Pending
                                                     Ticket</a></li>
                                             <li class="list-group-item"><a href="Inprocess.html"
-                                                    class=" bg-purple">In-Progress</a>
+                                                    class=" bg-purple">In-Progress</a></li>
+                                            <li class="list-group-item"><a href="invoice.html"
+                                                    class=" bg-purple">ReadyForInvoice</a></li>
+                                            <li class="list-group-item"><a href="completed.html">Completed Ticket</a>
                                             </li>
-                                            <li class="list-group-item"><a href="invoice.html" class=" bg-purple">Ready
-                                                    for
-                                                    Invoice</a></li>
-                                            <li class="list-group-item"><a href="completed.html"
-                                                    class=" bg-purple">Completed
-                                                    Ticket</a></li>
+                                            <li class="list-group-item"><a href="RejectedTicket.html">RejectedTicket</a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <a href="employee_ticket.html"
@@ -378,104 +156,33 @@
                     <div class="col-sm-12 col-xl-10 col-md-10 col-lg-10 col-sty" id="fix">
                         <p
                             style="box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);margin-left: -12px;padding: 20px;margin-right: -12px;font-weight: bold;">
-                            Admin <span class="span">XYZ Company <img src="icon/Mask group (2).png" alt=""
-                                    style="width: 40px;padding-left: 10px;"></span>
+                            Admin <span class="span" style="float: inline-end;">XYZ Company <img
+                                    src="icon/Mask group (2).png" alt="" style="width: 40px;padding-left: 10px;"></span>
                         </p>
 
 
-                        <h3 class="text-center fw-bold mb-3 mt-4" id="header">Profile</h3>
-                        <div class="overlay" id="overlay">
-                            <div class="spinner"></div>
-                        </div>
-                        <div class="rounded-circle logo-sty">
-                            <img src="" alt="Company Logo" id="logo-img" class="logo-img">
-                            <input type="file" class="input-sty" onchange="loadFile(event)">
-                            <i class="fa fa-pencil-alt pencil-icon"></i>
-                        </div>
+                        <h2 class="text-center m-3 mt-5 fw-bold">Profile</h2>
+                        <div class="container container-sty text-center">
 
-
-                        <div class="container box-sty mt-3">
-                            <form id="settingsForm" class="p-5 text-center">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="companyName" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">Company Name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield">
-                                            <input type="tel" id="phone" name="phoneNumber" placeholder=" "
-                                                class="input-sty">
-                                            <label>Phone Number</label>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="firstName" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">First name</label>
-                                            <span class="text-danger" id="errorFName"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="lastName" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">Last name</label>
-                                            <span class="text-danger" id="errorLName"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield mb-4">
-                                            <input id="street" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">Street</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield">
-                                            <input id="city" placeholder=" " type="text" class="input-sty">
-                                            <label class="label-sty">City</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield">
-                                            <input type="text" id="zip" name="zip" placeholder=" "
-                                                class="input-sty">
-                                            <label>Zip</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="material-textfield">
-                                            <input type="email" id="zip" name="email" placeholder=" "
-                                                class="input-sty">
-                                            <label>Email</label>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div class="d-flex justify-content-center">
-                                    <button type="submit" class="btn-green float-end">Edit</button>
-                                </div>
-                            </form>
+                            <input type="text" class="input-bottom-border mt-4" placeholder="Company Name" disabled
+                                style="background-color: #e5e5e5;">
+                            <label for="uploadLogo" class="upload-label">
+                                Upload Company Logo
+                                <input type="file" id="uploadLogo" class="form-control-file mt-4">
+                            </label>
+                            <textarea rows="1" placeholder="Company Address"
+                                class="input-bottom-border mt-4"></textarea>
+                            <input placeholder="First Name" type="text" class="input-bottom-border mt-4">
+                            <input placeholder="Last Name" type="text" class="input-bottom-border mt-4">
+                            <input placeholder="Phone Number" type="text" class="input-bottom-border mt-4">
+                            <input id="email" placeholder="Email" type="email" class="input-bottom-border mt-4">
+                            <button type="submit" class="mt-5 mb-5 login-button">Update</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('sidebarToggle').addEventListener('click', function () {
-            var sidebar = document.getElementById('left');
-            sidebar.classList.toggle('active');
-        });
-    </script>
 </body>
 
 </html>
