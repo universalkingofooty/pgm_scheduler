@@ -335,8 +335,7 @@
                         </div>
                         <label for="uploadLogo" class="upload-label d-flex justify-content-center">
                             <div class="logo-sty">
-                                <img id="logoPreview" alt="Upload Logo"
-                                    style="max-width: 100%; height: auto;">
+                                <img id="logoPreview" alt="Upload Logo" style="max-width: 100%; height: auto;">
                                 <input type="file" id="uploadLogo" accept="image/*">
                                 <!-- Pencil icon -->
                                 <span class="icon-pencil"><i class="fas fa-pencil-alt"></i></span>
@@ -403,7 +402,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="material-textfield">
-                                            <input type="email" id="zip" name="email" placeholder=" " class="input-sty">
+                                            <input type="email" id="email" name="email" placeholder=" " class="input-sty">
                                             <label>Email</label>
                                         </div>
                                     </div>
@@ -436,6 +435,33 @@
                 reader.readAsDataURL(file); // Convert the file into a data URL
             }
         });
+        const apiUrl = `https://m4j8v747jb.execute-api.us-west-2.amazonaws.com/dev/company/get/ShddWeFGFGkk9b67STTJY4`;
+        fetch(apiUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Store the fetched data
+                employeesData = data;
+                console.log(employeesData)
+
+
+                document.getElementById("companyName").value = employeesData.company_name
+                document.getElementById("phone").value= employeesData.phone_number
+                document.getElementById("firstName").value= employeesData.first_name
+                document.getElementById("lastName").value= employeesData.last_name
+                document.getElementById("street").value= employeesData.street
+                document.getElementById("city").value= employeesData.city
+                document.getElementById("zip").value= employeesData.zip
+                document.getElementById("email").value= employeesData.email
+                document.getElementById("state").value= employeesData.state
+
+            });
+
+
 
     </script>
 </body>

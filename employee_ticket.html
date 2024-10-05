@@ -96,6 +96,7 @@
 
                         <div class="container container-sty">
                             <h1 class="text-center m-3 mt-5 fw-bold ">Employee Ticket</h1>
+
                             <div class="container-fluid mt-5" id="table">
                                 <div id="whole-table">
                                     <!-- Table -->
@@ -113,9 +114,7 @@
                                                 <th>Pending work</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-
-                                            <!-- Add more rows as needed -->
+                                        <tbody id="employeeTableBody">
                                         </tbody>
                                     </table>
                                 </div>
@@ -155,133 +154,8 @@
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-    <script src="script/Inprocess_table.js"></script>
-    <script>
-        document.getElementById('sidebarToggle').addEventListener('click', function () {
-            var sidebar = document.getElementById('left');
-            sidebar.classList.toggle('active');
-        });
+    <script src="script/employee_ticket.js"></script>
 
-        $(document).ready(function () {
-            // Sample static data
-            const employeeData = [
-                {
-                    id: "001",
-                    name: "Rohith",
-                    phone: "01234 56789",
-                    specialization: "AC",
-                    email: "rohith@gmail.com",
-                    location: "Washington",
-                    completedWork: 7,
-                    pendingWork: 3
-                },
-                {
-                    id: "002",
-                    name: "Sham",
-                    phone: "78654 65523",
-                    specialization: "Refrigerator",
-                    email: "sham@gmail.com",
-                    location: "Sammamish",
-                    completedWork: 4,
-                    pendingWork: 2
-                },
-                {
-                    id: "003",
-                    name: "Maaz",
-                    phone: "98098 76543",
-                    specialization: "AC",
-                    email: "maaz@gmail.com",
-                    location: "Lynnwood",
-                    completedWork: 4,
-                    pendingWork: 2
-                }
-            ];
-            // Destroy existing instance if it exists and reinitialize
-            if ($.fn.DataTable.isDataTable('#ticketTable')) {
-                $('#ticketTable').DataTable().destroy();
-            }
-
-            // Initialize DataTables
-            const table = $('#ticketTable').DataTable({
-                paging: true,
-                lengthChange: true,
-                searching: true,
-                ordering: true,
-                info: true,
-                autoWidth: false,
-                responsive: true
-            });
-
-
-            // Insert data into the table dynamically
-            employeeData.forEach((employee, index) => {
-                let row = `
-                    <tr data-bs-toggle="collapse" data-bs-target="#details${index + 1}">
-                        <td class="details-control"></td>
-                        <td>${employee.id}</td>
-                        <td>${employee.name}</td>
-                        <td>${employee.phone}</td>
-                        <td>${employee.specialization}</td>
-                        <td>${employee.email}</td>
-                        <td>${employee.location}</td>
-                        <td>${employee.completedWork}</td>
-                        <td>${employee.pendingWork}</td>
-                    </tr>
-                    <tr class="collapse details-row" id="details${index + 1}">
-                        <td colspan="9">
-                            <div class="row">
-                                <div class="col-md-12 d-flex justify-content-center">
-                                    <button type="button" class="btn btn-primary modify">Modify</button>
-                                    <button type="button" class="btn btn-danger remove">Remove</button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                `;
-                table.row.add($(row)).draw(false);
-            });
-
-            // Add event listener for opening and closing details
-            $('#ticketTable tbody').on('click', 'tr.clickable', function () {
-                const target = $(this).data('bs-target');
-                $(target).collapse('toggle');
-            });
-
-            // Event listener for Modify button (added dynamically)
-            $('#ticketTable tbody').on('click', '.modify', function () {
-                const row = $(this).closest('tr').prev();
-                alert(`Modify clicked for employee: ${row.find('td:eq(2)').text()}`);
-            });
-
-            // Event listener for Remove button (added dynamically)
-            $('#ticketTable tbody').on('click', '.remove', function () {
-                const row = $(this).closest('tr').prev();
-                if (confirm(`Are you sure you want to remove employee: ${row.find('td:eq(2)').text()}?`)) {
-                    table.row(row).remove().draw();
-                }
-            });
-        });
-        function addButton() {
-            const elements = document.querySelectorAll(".input-bottom-border");
-            const cancel = document.querySelector(".cancel")
-            elements.forEach(element => {
-                element.style.display = "inline"; // Show the input fields
-                cancel.style.display = "inline";
-            });
-            // Show the cancel button
-        }
-        function cancelButton() {
-            const elements = document.querySelectorAll(".input-bottom-border");
-            const cancel = document.querySelector(".cancel")
-            elements.forEach(element => {
-                element.style.display = "none"; // Show the input fields
-                cancel.style.display = "none";
-            });
-            // Show the cancel button
-        }
-
-
-    </script>
 </body>
 
 </html>
